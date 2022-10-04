@@ -18,6 +18,7 @@ $input: #F9F9FB;
 $title : #B4BBC6;
 $border : #eff4f6;
 
+
 body{
     display: flex;
     justify-content: center;
@@ -146,4 +147,47 @@ input{
         margin-right:20px;
       }
     }
+}
+.homepage{
+    padding: 30px 0px;
+    .trends{
+        background-color: $white;
+        border-radius: 20px;
+        padding: 20px 15px 30px 15px;
+        .trend-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            h5{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 25px;
+                margin: 0;
+            }
+        }
+        
+        .trend-image{
+            text-align: center;
+        }
+        .trend-info{
+            text-align: center;
+            margin-top: 30px;
+            .info-header{
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 18px;
+                color: #34343f;
+                opacity: 0.7;
+                margin-bottom: 5px;
+            }
+            .info-text{
+                font-size: 12px;
+                line-height: 16px;
+                color: #464665;
+                opacity:  0.6;
+            }
+        }
+    }
+    
 }
