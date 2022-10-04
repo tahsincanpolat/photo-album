@@ -13,7 +13,7 @@
     "sass": "^1.55.0",
     "vue": "^3.2.38",
     "vue-router": "^4.0.13",
-    "vue-slick-carousel": "^1.0.6"
+    "vue3-carousel": "^0.2.0"
   },
   "devDependencies": {
     "vite": "^3.0.9",

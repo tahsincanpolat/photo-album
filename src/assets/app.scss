@@ -288,7 +288,64 @@ input{
                 line-height: 30px;
                 text-transform: capitalize;
             }
+            .album-slider{
+                .photos{
+                    .title{
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 26px;
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
     
 }
+.carousel__item {
+    min-height: 200px;
+    width: 100%;
+    background-color: var(--vc-clr-primary);
+    color: var(--vc-clr-white);
+    font-size: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel__slide {
+    padding: 10px;
+    flex-direction: column;
+    p{
+        position: relative;
+        top: 30px;
+        text-align: left;
+    }
+  }
+  .carousel__pagination{
+    position: relative;
+    top: -50px;
+      .carousel__pagination-item{
+          .carousel__pagination-button{
+              width: 10px;
+              height: 10px;
+              border-radius: 20px;
+              margin: 2px;
+              padding: 0;
+              background: $lightGray;
+              opacity: 0.7;
+                  .active{
+                      &::after{
+                      background-color: none !important;
+                  }
+              }
+              &::after{
+                  content: none;
+              } 
+              &--active{
+                  opacity: 1
+              }
+          }
+         
+      }
+  }

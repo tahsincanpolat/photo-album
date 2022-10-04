@@ -1,32 +1,38 @@
 <template>
     <div class="photos">
-        <vue-slick-carousel v-if="photos" v-bind="slickOptions"  :arrows="false">
-            <div v-for="(photo,key) in photos" :key="key">
-                <a href="">{{photo.id}}</a>
-            </div>
-        </vue-slick-carousel>
+        <carousel>
+            <Slide :items-to-show="1" v-for="(photo,key) in photos.slice(-10)" :key="key">
+                <div>
+                    <img :src="photo.url" />
+                </div>
+                <div class="title">
+                    <p>{{photo.title}}</p>
+                </div>
+            </Slide>
+            <template #addons>
+                <Pagination />
+            </template> 
+        </carousel>
     </div>
 </template>
 <script>
 import  axios  from 'axios'
-import VueSlickCarousel from 'vue-slick-carousel'
-import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
+import 'vue3-carousel/dist/carousel.css'
+import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 export default {
     name: 'Photos',
-    components: { VueSlickCarousel },
+    components: {
+        Carousel,
+        Slide,
+        Pagination,
+        Navigation,
+    },
     data(){
         return {
             photos: [],
-            slickOptions: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                speed: 300,
-                autoplay: false,
-                autoplaySpeed: 4000,
-                prevArrow:false
-            }
+           
         }
     },
     mounted(){
