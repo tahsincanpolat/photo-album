@@ -53,22 +53,50 @@ input{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    @media screen and (max-width:768px) {
+        flex-direction: column;
+        justify-content: center;
+        height: 200px;
+        padding-bottom: 20px;
+    }
     .left-side{
         width: 60%;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex:1 0;
+        @media screen and (max-width:768px) {
+            flex-direction: column;
+            justify-content: center;
+            height: 200px;
+        }
+        .logo{
+            @media screen and (max-width:768px) {
+               margin-bottom: 20px;
+            }
+        }
+        input{
+            @media screen and (max-width:768px) {
+                width: auto;
+            }
+        }
+
     }
     .right-side{
         width: 40%;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        @media screen and (max-width:768px) {
+            width: 80%;
+        }
         .icons{
             flex: 1 0;
             display: flex;
             justify-content: space-evenly;
+            @media screen and (max-width:768px) {
+                justify-content: space-between;
+            }
             .icon{
                 position: relative;
                 img{
@@ -95,8 +123,14 @@ input{
             font-weight: 600;
             text-align: center;
             border-left: 1px $border solid;
+            @media screen and (max-width:768px) {
+                justify-content: right;
+            }
             span{
                 margin-right: 20px;
+                @media screen and (max-width:768px) {
+                    display: none;
+                }
             }
             .user-icon{
                 margin-right: 15px;
@@ -128,7 +162,7 @@ input{
         @media screen and (max-width:768px) {
             margin-top: 20px;
             margin-bottom: 10px;
-         }
+        }
     }
     p{
         font-size: 14px;
@@ -150,6 +184,9 @@ input{
 }
 .homepage{
     padding: 30px 0px;
+    @media screen and (max-width:768px) {
+        padding: 30px 20px;
+    }
     .menu{
         ul {
             list-style-type: none;
@@ -238,6 +275,9 @@ input{
         margin-top: 20px;
         border-radius: 20px;
         padding: 15px;
+        @media screen and (max-width:768px) {
+            margin-bottom: 20px;
+        }
         h6{
             font-size: 22px;
             line-height: 30px;
