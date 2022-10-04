@@ -1,1 +1,105 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+
+$black : #000000;
+$purple :#5458F7;
+$gray: #9798B4;
+$dark: #2C2C2C;
+$white : #ffffff;
+$deepDark: #272727;
+$footerDark: #060740;
+$lightGray:  #C4C4C4;
+$background:#E5E5E5;
+$input: #F9F9FB;
+$title : #B4BBC6;
+$border : #eff4f6;
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: $background;
+    margin:0;
+    font-family: "Nunito Sans" !important;
+}
+input{
+    height: 52px;
+    background-color: $input;
+    border: none;
+    width: 350px;
+    padding: 0 15px;
+    border-radius: 8px;
+    &::placeholder{
+        color: $lightGray;
+        font-family: FontAwesome;
+        font-size: 15px;
+        font-weight: normal;
+        overflow: visible;
+        vertical-align: top;
+        display: inline-block !important;
+    }
+}
+#app{
+    width: 100%;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background-color: $white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    .left-side{
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex:1 0;
+    }
+    .right-side{
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .icons{
+            flex: 1 0;
+            display: flex;
+            justify-content: space-evenly;
+            .icon{
+                position: relative;
+                img{
+                    margin-right: 5px;
+                }
+                .notification{
+                    width: 8px;
+                    height: 8px;
+                    background-color: $purple;
+                    border-radius: 10px;
+                    position: absolute;
+                    right: 3.6px;
+                    top: -1px;
+                }
+            }
+          
+        }
+        .user{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1 0;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: center;
+            border-left: 1px $border solid;
+            span{
+                margin-right: 20px;
+            }
+            .user-icon{
+                margin-right: 15px;
+            }
+          
+        }
+
+    }
+}
