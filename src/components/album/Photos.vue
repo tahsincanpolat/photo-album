@@ -16,10 +16,9 @@
     </div>
 </template>
 <script>
-import  axios  from 'axios'
 
-import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
 
 export default {
     name: 'Photos',
@@ -38,7 +37,7 @@ export default {
         }
     },
     mounted(){
-        console.log(this.albumPhotos.length);
+        // console.log(this.albumPhotos.length);
     },
     computed: {
         albumPhotos(){
