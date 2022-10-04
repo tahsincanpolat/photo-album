@@ -13,6 +13,10 @@
                 </div>
             </div>
         </div>
+        <div class="comment-send">
+            <input type="text" class="input" placeholder="Type your comment here"/>
+            <button class="btn btn-primary">Send</button>
+        </div>
     </div>
 </template>
 <script>
