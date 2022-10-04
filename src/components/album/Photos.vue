@@ -19,7 +19,7 @@
 import  axios  from 'axios'
 
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
 
 export default {
     name: 'Photos',
@@ -27,7 +27,6 @@ export default {
     components: {
         Carousel,
         Slide,
-        Pagination,
         Navigation,
     },
     date(){
