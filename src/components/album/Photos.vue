@@ -1,17 +1,17 @@
 <template>
     <div class="photos">
         <carousel>
-            <Slide :items-to-show="1" v-for="(photo,key) in photos.slice(-10)" :key="key">
+            <Slide :settings="settings" v-for="(photo,key) in albumPhotos" :key="key">
                 <div>
-                    <img :src="photo.url" />
+                    <img :src="photo.url" class="img-fluid" />
                 </div>
                 <div class="title">
                     <p>{{photo.title}}</p>
                 </div>
             </Slide>
             <template #addons>
-                <Pagination />
-            </template> 
+                <Navigation />
+            </template>
         </carousel>
     </div>
 </template>
@@ -23,27 +23,29 @@ import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
 
 export default {
     name: 'Photos',
+    props: ['id','photos' ], 
     components: {
         Carousel,
         Slide,
         Pagination,
         Navigation,
     },
-    data(){
-        return {
-            photos: [],
-           
+    date(){
+            return{
+            settings: {
+                itemsToShow: 1,
+                snapAlign: 'center',
+            },
         }
     },
     mounted(){
-        this.getAlbums()
+        console.log(this.albumPhotos.length);
     },
-    methods: {
-        getAlbums(){
-            axios.get("https://jsonplaceholder.typicode.com/photos").then((response)=>{
-               this.photos = response.data
-            })
+    computed: {
+        albumPhotos(){
+           return this.photos.filter((photo)=> photo.albumId == this.id)
         }
     }
+   
 }
 </script>
