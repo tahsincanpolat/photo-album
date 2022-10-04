@@ -1,6 +1,8 @@
 <template lang="">
-    <div>
-        Home
+    <div class="container">
+       <div class="row">
+            
+       </div>
     </div>
 </template>
 <script>
