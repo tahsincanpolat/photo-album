@@ -150,6 +150,50 @@ input{
 }
 .homepage{
     padding: 30px 0px;
+    .menu{
+        ul {
+            list-style-type: none;
+            margin: 0;
+            width: 100%;
+            background-color: $white;
+            border-radius: 20px;
+            padding: 30px 0px;
+          }
+          
+          li{
+            display: flex;
+            justify-content: left;
+            padding-left: 50px;
+            a {
+                display: block;
+                color: $gray;
+                text-decoration: none;
+                padding: 15px 20px;
+                
+            }
+            &:hover{
+                background-color: #f3f3f6;
+                opacity: 0.7;
+                border-left: 10px $purple solid;
+                padding-left: 40px;
+                a{
+                    color:$purple;
+                }
+            }   
+            img{
+                color: $gray;
+            }   
+          }
+          .active{
+            background-color: #f3f3f6;
+            opacity: 0.7;
+            border-left: 10px $purple solid;
+            padding-left: 40px;
+            a{
+                color:$purple;
+            }
+        }
+    }
     .trends{
         background-color: $white;
         border-radius: 20px;
